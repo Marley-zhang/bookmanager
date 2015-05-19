@@ -1,0 +1,17 @@
+<body style="width:300px; height:600px;  margin:0 auto;overflow:hidden;">
+<% form_tag do %> 
+  <p> 
+    <label for="name">Name:</label> 
+    <%= text_field_tag :name, params[:name] %> 
+  </p>
+  <p> 
+    <label for="password">Password:</label>
+    <%= password_field_tag :password, params[:password] %>
+    </p>
+  <p>
+    <center>
+    <%= submit_tag "Login" %> 
+    </center>
+  </p>
+<% end %> 
+</body>

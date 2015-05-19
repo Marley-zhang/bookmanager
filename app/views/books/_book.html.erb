@@ -1,0 +1,9 @@
+  <tr>
+      <td><%= book.name.force_encoding('utf-8') %></td>
+      <td><%= book.desc.force_encoding('utf-8') %></td>
+      <td><%= book.book_type.name.force_encoding('utf-8') %></td> 
+      <td><%= link_to 'Show', book %></td>
+      <td><%= link_to 'Edit', edit_book_path(book) %></td>
+      <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+

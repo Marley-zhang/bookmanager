@@ -1,0 +1,9 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+    <th>Btype</th>
+  </tr>
+<%= render(@books) %> 
+</table>
+<br />

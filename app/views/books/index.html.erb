@@ -1,0 +1,32 @@
+<h1>Listing books</h1>
+<select>
+  <option value="1">已使用</option>
+  <option value="2">未使用</option>
+  <option value="3">废弃</option>
+</select>
+BookType:
+<select name="btyid">
+    <option>请选择</option>  
+    <% for booktypes in @booktypes %>
+      <option value='<%= booktypes.id %>'><%= booktypes.name.force_encoding('utf-8') %></option>
+    <% end %>
+</select>
+file:
+<form> <input type="file" name="pic" id="pic" accept="text/csv" /></form>
+</br>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+    <th>Btype</th>
+  </tr>
+<%= render(@books) %> 
+</table>
+<br />
+
+<%= link_to 'New Book', new_book_path %>
+&nbsp;&nbsp;
+<%= link_to 'back' , home_index_path %>
+
+<p><%= will_paginate @books %></p>
+
