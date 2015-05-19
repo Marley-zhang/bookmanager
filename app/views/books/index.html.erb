@@ -6,7 +6,7 @@
 </select>
 BookType:
 <select name="btyid">
-    <option>请选择</option>  
+    <option>请选择.</option>  
     <% for booktypes in @booktypes %>
       <option value='<%= booktypes.id %>'><%= booktypes.name.force_encoding('utf-8') %></option>
     <% end %>
